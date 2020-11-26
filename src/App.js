@@ -1,28 +1,29 @@
 import React from "react";
+import Card from './components/card';
 import './App.css';
-import Header from "./components/Header";
-import Section2 from "./components/Carousel";
-import Floating from "./components/Floating";
-import { BrowserRouter , Route } from 'react-router-dom';
-import Complaint from './components/complaint';
-import Feedback from "./components/Feedback";
+import Cartnum from './components/cartnum';
+import 'semantic-ui-css/semantic.min.css';
+import Tables from './components/table';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Route path='/com' component={Complaint} />
-        <Route path='/fed' component={Feedback} />
-        <Route path="/" exact component={() => <div>
+    <div className="App">  
+      <Tables
+        item =<Card
 
-           <Header/>
-      <Section2/>
-      <Floating />
-        </div>
-        }/>
-      </BrowserRouter>
-      
-     
+                header="COVID POSTERS | COVID-P015"
+                mat="Material"
+                matdes="PREMIUM SELF ADHESIVE"
+
+                dim="Dimension"
+                dimdes="19 INCH X 27 INCH X .2 INCH"
+
+                pri="Price"
+                prides="₹400"
+              />
+        quant =<Cartnum/>
+        tot= "₹400"
+      />
     </div>
   );
 }
